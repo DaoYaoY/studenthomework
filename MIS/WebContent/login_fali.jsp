@@ -20,8 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  </head>
  
  <body> 
-  <a href="Outlogin">登录 </a>   
   <% out.println("登录失败");%>   
-  
+  <% response.setHeader("refresh","5;url=login.jsp");%>  
   </body> 
 </html> 

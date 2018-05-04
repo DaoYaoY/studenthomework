@@ -22,10 +22,10 @@ public class Dao {
     private static String password;//数据库密码
     
     static{
-        driver="com.mysql.jdbc.Driver";
-        url="jdbc:mysql://localhost:3306/web";
-        user="root";
-        password="111";
+        driver=ResourceBundle.getBundle("db").getString("driver");
+        url=ResourceBundle.getBundle("db").getString("url");
+        user=ResourceBundle.getBundle("db").getString("user");
+        password=ResourceBundle.getBundle("db").getString("password");
     }
     /*private static String driver="com.mysql.jdbc.Driver";
     private static String url="jdbc:mysql:///test";
@@ -85,13 +85,18 @@ public class Dao {
      * @param arr
      * @return
      */
-    public static boolean add(String sql){
+    public static boolean addUpdateDelete(String sql,Object[] arr){
         Connection con=null;
         PreparedStatement ps=null;
         try {
             con=Dao.getCon();//第一步 ：连接数据库的操作
             ps=con.prepareStatement(sql);//第二步：预编译
             //第三步：设置值
+            if(arr!=null && arr.length!=0){
+                for(int i=0;i<arr.length;i++){
+                    ps.setObject(i+1, arr[i]);
+                }
+            }
             int count=ps.executeUpdate();//第四步：执行sql语句
             if(count>0){
                 return true;
@@ -121,22 +126,5 @@ public class Dao {
         }
     }*/
     
-    public static boolean select(String sql) {
-    	boolean flag=false;
-    	Connection con=null;
-        PreparedStatement ps=null;
-        try {
-            con=Dao.getCon();//第一步 ：连接数据库的操作
-            ps=con.prepareStatement(sql);//第二步：预编译
-            //第三步：设置值
-            ResultSet row=ps.executeQuery();
-    	if(row.next()) {
-    		flag= true;}
-        else {
-    	flag= false;
-        }
-    }catch(Exception e) {
-    	e.printStackTrace();
-    	}return flag;
-    }  
+    
 }
