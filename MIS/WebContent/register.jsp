@@ -18,11 +18,13 @@ function check(form){
 </head>
 
 <body>
-     <form action="userregister.jsp" method="post" id="form" onsubmit="return check(this);">
+     <form action="Register" method="post" id="form" onsubmit="return check(this);">
    
     <table align="center">
-        <tr>
-            <td>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
+         <tr>
+            
+            <td><input type="hidden" name="methodNaem"value="0"/>
+            账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
             <td>
                 <input type="text" name="name" id="name"/>
                 <div id="nameError" style="display:inline;color:red;"></div>
