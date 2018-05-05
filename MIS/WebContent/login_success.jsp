@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <head>
    <base href="<%=basePath%>"> 
  
- <title>登录失败</title>
+ <title>登录成功</title>
 
  <meta http-equiv="pragma" content="no-cache">
  <meta http-equiv="cache-control" content="no-cache">
@@ -20,8 +20,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  </head>
  
  <body> 
-  <a href="Outlogin">登录 </a>   
-  <% out.println("登录失败");%>   
+  欢迎您  ${name }     <a href="Outlogin">退出登录 </a>   
+  <% out.println("登录成功");%>   
   
   </body> 
 </html> 
