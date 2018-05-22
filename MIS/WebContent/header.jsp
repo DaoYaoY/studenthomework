@@ -137,31 +137,31 @@
 </div>
 
 <div class="leftbody">
-         hhhhhh                
+               <img alt="" src="images/家居.jpg"style="width:400px;height:100px;">       
    
 </div>
 
 <div class="rightbody">
-       jjj   
+      <img alt="" src="images/手机.jpg" style="width:400px;height:400px;">
 </div>
 
 <div class="rightbody2">
-          lll
+          <img alt="" src="images/食品.jpg" style="width:288px;height:400px;">
 </div>
 
 <div class="indiv1" style="background:DeepSkyBlue;">
-          ddd
+         4
 </div>
 <div class="indiv1" style="background:PowderBlue;">
-          
+         <img alt="" src="images/cloth.jpg" style="width:400px;height:100px;">
 </div>
 
 <div class="indiv1" style="background:SkyBlue;">
-          ddd
+         <img alt="" src="images/运动.jpg" style="width:400px;height:100px;">
 </div>
 
 <div class="indiv1" style="background:LightBlue;">
-          ddd
+          <img alt="" src="images/化妆品.jpg" style="width:400px;height:100px;">
 </div>
 
 <hr/>
