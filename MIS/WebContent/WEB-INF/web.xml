@@ -32,4 +32,12 @@
     <servlet-name>Outlogin</servlet-name>
     <url-pattern>/Outlogin</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>FindPage</servlet-name>
+    <servlet-class>com.dyy.servvlet.FindPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindPage</servlet-name>
+    <url-pattern>/FindPage</url-pattern>
+  </servlet-mapping>
 </web-app>

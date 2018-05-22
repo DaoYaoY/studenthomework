@@ -75,6 +75,8 @@ public class Login extends HttpServlet {
 		   ResultSet row=ps.executeQuery();
 		   if(row.next()){
 			   request.getSession().setAttribute("name", name);
+			   String named = row.getString("name");
+			   System.out.println(named);
 			   request.setCharacterEncoding("utf-8");
 			   Cookie cookie = new Cookie("cookie",name.trim());
 			   cookie.setMaxAge(10);

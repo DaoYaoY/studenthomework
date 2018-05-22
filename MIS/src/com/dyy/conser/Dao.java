@@ -23,15 +23,11 @@ public class Dao {
     
     static{
         driver="com.mysql.jdbc.Driver";
-        url="jdbc:mysql://localhost:3306/web";
+        url="jdbc:mysql://localhost:3306/web?useUnicode=true&characterEncodeing=UTF-8";
         user="root";
         password="111";
     }
-    /*private static String driver="com.mysql.jdbc.Driver";
-    private static String url="jdbc:mysql:///test";
-    private static String user="root";
-    private static String password="123456";*/
-    
+   
     /***
      * 连接数据库的方法
      * @return
