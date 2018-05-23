@@ -81,7 +81,7 @@
 }
 
 .bottom{
-      background-color:white;
+      background-color:Azure;
       font-family: "华文隶书";
       font-style: oblique;
       border:none;
@@ -116,7 +116,7 @@
 </style>
 </head>
 <body>
-            <p class="view"><font size="2"><a href="login.jsp">登录</a>   <a href="register.jsp"> 注册</a></font> </p><hr/>
+ <div style="background-color:Azure;">           <p class="view"><font size="2"><a href="login.jsp">登录</a>   <a href="register.jsp"> 注册</a></font> </p><hr/>
 <div class="top2" align="center" >
             <img src="file://D:\百度图标.jpg" width=80px height=40px style="vertical-align:bottom;" />
             <input style="vertical-align:middle;"/>
@@ -125,19 +125,19 @@
 
 <div class="top" style="word-spacing=30px;" >
 <div class="daohang"> 
-           <div class="daohang" >      <a href="index.jsp">    首页   </a> </div>  
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="FindPage">食品</a>     </div>    
+           <div class="daohang" >      <a href="header.jsp">    首页   </a> </div>  
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="">食品</a>     </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>服装</a>   </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 家居 </a> </div>      
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>美妆</a>     </div>   
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>手机百科</a>      </div>                                     <div class="daohang">   <a>个人中心</a></div>  
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a>个人中心</a></div>  
 </div></div>
-<div class="righttop" ><a href="index.jsp">  <img alt="" src="images/timg.jpg" style="width:100%;height:400px;"></a>
+<div class="righttop" ><a href="header.jsp">  <img alt="" src="images/timg.jpg" style="width:100%;height:400px;"></a>
 
 </div>
 
 <div class="leftbody">
-               <img alt="" src="images/家居.jpg"style="width:400px;height:100px;">       
+         <a>     <img alt="" src="images/家居.jpg"style="width:400px;height:100px;">   </a>    
    
 </div>
 
@@ -146,22 +146,22 @@
 </div>
 
 <div class="rightbody2">
-          <img alt="" src="images/食品.jpg" style="width:288px;height:400px;">
+    <a>      <img alt="" src="images/食品.jpg" style="width:288px;height:400px;"></a>
 </div>
 
 <div class="indiv1" style="background:DeepSkyBlue;">
          4
 </div>
 <div class="indiv1" style="background:PowderBlue;">
-         <img alt="" src="images/cloth.jpg" style="width:400px;height:100px;">
+    <a>     <img alt="" src="images/cloth.jpg" style="width:400px;height:100px;"></a>
 </div>
 
 <div class="indiv1" style="background:SkyBlue;">
-         <img alt="" src="images/运动.jpg" style="width:400px;height:100px;">
+       <a>  <img alt="" src="images/运动.jpg" style="width:400px;height:100px;"></a>
 </div>
 
 <div class="indiv1" style="background:LightBlue;">
-          <img alt="" src="images/化妆品.jpg" style="width:400px;height:100px;">
+       <a> <img alt="" src="images/化妆品.jpg" style="width:400px;height:100px;"></a>
 </div>
 
 <hr/>
@@ -210,7 +210,7 @@
                       <p> 经济人物  </p>
       </div>
 
-
+</div>
 
 </body>
 </html>

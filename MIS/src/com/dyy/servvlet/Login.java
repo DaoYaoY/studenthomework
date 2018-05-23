@@ -81,7 +81,7 @@ public class Login extends HttpServlet {
 			   Cookie cookie = new Cookie("cookie",name.trim());
 			   cookie.setMaxAge(10);
 			   response.addCookie(cookie);
-			   response.sendRedirect("login_success.jsp");
+			   response.sendRedirect("header.jsp");
 			      
 		   }else {
 			   //System.out.println("ÃÜÂë»òÕË»§´íÎó£¡£¡");

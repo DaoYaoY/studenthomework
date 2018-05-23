@@ -55,7 +55,7 @@ public class Register extends HttpServlet {
 		ps.setString(4, phone);
 		int row = ps.executeUpdate();
 		if(row!=0) {
-			response.sendRedirect("login_fali.jsp");
+			response.sendRedirect("login.jsp");
 		}conn.close();
 		ps.close();
 		}catch (SQLException e) {

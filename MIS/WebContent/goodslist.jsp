@@ -45,7 +45,7 @@ for(Goods good:list){
 
 <%} %>
 
-
+<div style="position:fixed;margin-left:50%;text-align:center;"><%=request.getAttribute("bar") %></div>
 
 
 
