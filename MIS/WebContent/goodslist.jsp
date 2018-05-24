@@ -38,14 +38,14 @@ for(Goods good:list){
 %>
 <div class="rightbody"><div class="zhanshi"><hr><img src="<%=good.getimgpath() %>"/>
 <div>
-<%=good.getname() %>
+<%=good.getname() %><div><%=good.getprice() %></div>
 </div>
 </div>
 </div>
 
 <%} %>
 
-<div style="position:fixed;margin-left:50%;text-align:center;"><%=request.getAttribute("bar") %></div>
+<div style="position:fixed;bottom:0;margin-left:50%;text-align:center;"><%=request.getAttribute("bar") %></div>
 
 
 
