@@ -20,7 +20,7 @@ public class DBConnection {
 			InputStream is = classLoader.getResourceAsStream("config/props/db.properties");
 			Properties props = new Properties();
 			props.load(is);
-			url = "jdbc:mysql://localhost:3306/dang";
+			url = "jdbc:mysql://localhost:3306/dangdang";
 			user = "root";
 			password = "111";
 			// ×¢²áÇý¶¯

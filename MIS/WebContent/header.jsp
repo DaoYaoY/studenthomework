@@ -11,7 +11,7 @@
       height:40px;
       margin:60px 0px;
       margin-bottom:0px;
-      background-color:MediumOrchid;
+      background-color:orange;
       color:white;
       border:1px solid black;
       text-align:left;
@@ -25,13 +25,14 @@
       
 }
 .righttop{
-      background-color:LightCyan; 
+      background-color:white; 
       height:400px;
       width:100%;
       border:none;
       background-image:url();
       //margin:0px 0px;
 }
+
 .view{
       //float:right;
       color:blue;
@@ -40,11 +41,11 @@
 }
 
 .leftbody{
-      background-color:Thistle;
+      background-color:white;
       text-align:left;
       text-size:3;
-      width:400px;
-      height:100px;
+      width:200px;
+      height:200px;
       float:left;
       margin-left:60px;
       margin-right:30px;
@@ -81,7 +82,7 @@
 }
 
 .bottom{
-      background-color:Azure;
+      background-color:white;
       font-family: "华文隶书";
       font-style: oblique;
       border:none;
@@ -116,99 +117,68 @@
 </style>
 </head>
 <body>
- <div style="background-color:Azure;">           <p class="view"><font size="2"><a href="login.jsp">登录</a>   <a href="register.jsp"> 注册</a></font> </p><hr/>
-<div class="top2" align="center" >
-            <img src="file://D:\百度图标.jpg" width=80px height=40px style="vertical-align:bottom;" />
-            <input style="vertical-align:middle;"/>
-            <a href="http://www.baidu.com">百度一下</a>
+ <div style="background-color:white;color:black">           <p class="view"><font size="2"><a href="login.jsp"style="text-decoration:none;">登录</a>   <a href="register.jsp"style="text-decoration:none;"> 注册</a></font> </p><hr/>
+<div class="top2">
+            <img src="images/淘宝.gif" width=80px height=50px style="vertical-align:bottom;" />
+            <input style="vertical-align:right;border:1px solid ";"type="search"  value=""/><input type="button" value="搜索"/>
 </div>
 
 <div class="top" style="word-spacing=30px;" >
 <div class="daohang"> 
            <div class="daohang" >      <a href="header.jsp">    首页   </a> </div>  
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="">食品</a>     </div>    
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>服装</a>   </div>    
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="">化妆品</a>     </div>    
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>女装</a>   </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 家居 </a> </div>      
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>美妆</a>     </div>   
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 美食</a>     </div>   
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a>个人中心</a></div>  
 </div></div>
-<div class="righttop" ><a href="header.jsp">  <img alt="" src="images/timg.jpg" style="width:100%;height:400px;"></a>
+
 
 </div>
 
-<div class="leftbody">
-         <a>     <img alt="" src="images/家居.jpg"style="width:400px;height:100px;">   </a>    
-   
-</div>
 
-<div class="rightbody">
-      <img alt="" src="images/手机.jpg" style="width:400px;height:400px;">
+<link rel="stylesheet"type="text/css"href="MyStyle.css">
+<script type="text/javascript">src="MoveEffect.js"</script>
+<div id="photo-list"><ul id="scroll">
+<li><a href="#"><img src="images/手机会场.jpg"width="400px"height="200px"alt=""/></a></li>
+<li><a href="#"><img src="images/手机会场1.jpg"width="400px"height="200px"alt=""/></a></li>
+</ul>
 </div>
+<div class="righttop">
+    <img alt=""src="images/品牌街.jpg">
+    <img alt="" src="images/苹果.jpg"style="width:200px;height:200px">
+    <img alt="" src="images/华为.jpg"style="width:200px;height:200px">
+    <img alt="" src="images/小米.jpg"style="width:200px;height:200px">
+    <img alt="" src="images/vivo.jpg"style="width:200px;height:200px">
+    <img alt="" src="images/联想.jpg"style="width:300px;height:200px">
+</div>
+<div class="righttop">
+    <img alt=""src="images/今日秒杀.jpg">
+    <img alt=""src="images/1.jpg"style="width:250px;height:250px">
+    <img alt=""src="images/2.jpg"style="width:250px;height:250px">
+    <img alt=""src="images/3.jpg"style="width:250px;height:250px">
+    <img alt=""src="images/5.jpg"style="width:250px;height:250px">
 
-<div class="rightbody2">
-    <a>      <img alt="" src="images/食品.jpg" style="width:288px;height:400px;"></a>
 </div>
-
-<div class="indiv1" style="background:DeepSkyBlue;">
-         4
-</div>
-<div class="indiv1" style="background:PowderBlue;">
-    <a>     <img alt="" src="images/cloth.jpg" style="width:400px;height:100px;"></a>
-</div>
-
-<div class="indiv1" style="background:SkyBlue;">
-       <a>  <img alt="" src="images/运动.jpg" style="width:400px;height:100px;"></a>
-</div>
-
-<div class="indiv1" style="background:LightBlue;">
-       <a> <img alt="" src="images/化妆品.jpg" style="width:400px;height:100px;"></a>
-</div>
-
 <hr/>
-      <div class="bottom">
-                                    <p style="font-size:20px;">  人物</p>
-                        <p> 政治人物</p>
-                     <p>  历史人物</p>
-                       <p> 文化人物</p>
-                     <p>  虚拟人物</p>
-                      <p> 经济人物  </p>
+<div class="bottom">
+     <p>电脑版</p>
+</div>
+
+<div class="bottom">
+      <p> 手机版 </p>
       </div>
 
 <div class="bottom">
-                                    <p style="font-size:20px;">  人物</p>
-                        <p> 政治人物</p>
-                     <p>  历史人物</p>
-                       <p> 文化人物</p>
-                     <p>  虚拟人物</p>
-                      <p> 经济人物  </p>
+      <p> help</p>
       </div>
 
 <div class="bottom">
-                                    <p style="font-size:20px;">  人物</p>
-                        <p> 政治人物</p>
-                     <p>  历史人物</p>
-                       <p> 文化人物</p>
-                     <p>  虚拟人物</p>
-                      <p> 经济人物  </p>
-      </div>
+      <p>提建议</p>
 
-<div class="bottom">
-                                    <p style="font-size:20px;">  人物</p>
-                        <p> 政治人物</p>
-                     <p>  历史人物</p>
-                       <p> 文化人物</p>
-                     <p>  虚拟人物</p>
-                      <p> 经济人物  </p>
-      </div>
+</div>
 
-<div class="bottom">
-                                    <p style="font-size:20px;">  人物</p>
-                        <p> 政治人物</p>
-                     <p>  历史人物</p>
-                       <p> 文化人物</p>
-                     <p>  虚拟人物</p>
-                      <p> 经济人物  </p>
-      </div>
+
 
 </div>
 
