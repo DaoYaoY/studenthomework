@@ -11,7 +11,7 @@ String basepath=request.getScheme()+"://"+request.getServerName()+":"+request.ge
 <title>Insert title here</title>
 <script type="text/javascript">
      function check(form){
-    	 if(form.id.value==""){
+    	 if(form.name.value==""){
     		 alert("账户不能为空");
     		 return false;
     	 }
@@ -67,7 +67,7 @@ html,body{
 <body>
 <div class="bg">
  <div class="login">
-<form action="Login" method="post">   
+<form action="Login" method="post" onsubmit="return check(this);">   
 <input type="hidden" name="methodNaem"value="1"/>
 <p>账号：<input type="text" name="name" id="name" style="margin-top:120px;"/></p>
 <p>密码：<input type="password" name="password" id="password"/></p><br>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import com.dyy.bean.User;
 import com.dyy.conser.Car;
@@ -34,7 +35,7 @@ public class BuyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		 //TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
@@ -64,10 +65,14 @@ public class BuyServlet extends HttpServlet {
 			}
 			
 			car.add(carItem);
+			//out.println("<script language='javascript'>alert('购买成功！');window.location.href='response.sendRedirect(request.getHeader('Referer'))';</script>");
+			JOptionPane.showMessageDialog(null, "购买成功");
+			response.sendRedirect(request.getHeader("Referer"));
 			
 			
 		}else {
-			out.println("请先登录");
+			System.out.println("请先登录");
+			response.sendRedirect("login.jsp");
 		}
 		
 		

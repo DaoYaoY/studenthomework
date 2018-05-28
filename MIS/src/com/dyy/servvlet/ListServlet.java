@@ -42,10 +42,12 @@ public class ListServlet extends HttpServlet {
 		Car car = (Car) session.getAttribute("car");
 		User user = (User) session.getAttribute("user");
 		if (user == null){
-						out.println("还没登录。<a href='login.jsp'>请登录</a>");
+						//out.println("还没登录。<a href='login.jsp'>请登录</a>");
+						response.sendRedirect("login.jsp");
 						return;
 						}
-		out.println("<b>" + user.getName() + "</b> 的购物车<br/>");
+		response.sendRedirect("list_car.jsp");
+		//out.println("<b>" + user.getName() + "</b> 的购物车<br/>");
 		if (car!= null){
 				for (CarItem carItem : car.list()){
 					out.println("商品：" + carItem.getProduct() + " 数量：" + carItem.getNum() + " <a href='DelectServlet?id=" + carItem.getId() + "'>删除</a>");

@@ -5,6 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+function check(form){
+HttpSession session = request.getSession();
+
+User user = (User) session.getAttribute("user");
+
+if(user==null){
+	alert("您还没有登录！");
+	return false;
+}return true;
+}
+</script>
 <link rel="stylesheet" href="Css.css" type="text/css" />
 <style type="text/css">
 .rightbody{
@@ -41,7 +53,7 @@ for(Goods good:list){
 <div>
 <%=good.getname() %><p><div><%=good.getdescribe() %></div><p><p><div style="font-seze:10px;color:red;text-align:center;">¥<%=good.getprice() %></div>
 <p></p>
-<form action="BuyServlet" method="post">
+<form action="BuyServlet" method="post" onsubmit="return check(this);">
 <input name="num" type="text">台
 <input name="name" type="hidden" value="<%=good.getname()%>">
 <button type="submit">购买</button>
