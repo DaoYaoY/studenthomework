@@ -129,8 +129,13 @@
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="">化妆品</a>     </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>女装</a>   </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 家居 </a> </div>      
+<<<<<<< HEAD
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 美食</a>     </div>   
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a>个人中心</a></div>  
+=======
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>美妆</a>     </div>   
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a href="ListServlet">我的购物车</a></div>  
+>>>>>>> b30a5cd9a4ccee1b38e9d12e0c37fc77637732c9
 </div></div>
 
 

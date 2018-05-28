@@ -34,8 +34,8 @@ public class Outlogin extends HttpServlet {
 		if(session==null) {
 			return;
 		}
-		session.removeAttribute("name");
-		response.sendRedirect("login.jsp");
+		session.removeAttribute("user");
+		response.sendRedirect("header.jsp");
 	}
 
 	/**

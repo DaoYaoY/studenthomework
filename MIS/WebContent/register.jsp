@@ -17,8 +17,16 @@ function check(form){
 </script>
 </head>
 
-<body>
-     <form action="Register" method="post" id="form" onsubmit="return check(this);">
+<body style="height:100%;width:100%;text-align:center;background-color:#66B3FF;position:relative;">
+<div style="position:absolute;
+                text-align:center;
+                width:300px;
+                height:300px;
+                border-radius:10px;
+                border:solid rgb(100,100,100) 1px;
+                margin:150px 520px;
+                position:absolute;">
+  <p><p><p><p><p><p>   <form action="Register" method="post" id="form" onsubmit="return check(this);">
    
     <table align="center">
          <tr>
@@ -63,7 +71,7 @@ function check(form){
         </tr>
     </table>
 </form>
-     
+     </div>
 
 
 </body>

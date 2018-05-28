@@ -74,7 +74,10 @@ public class Login extends HttpServlet {
 		   ps.setString(2, pass);
 		   ResultSet row=ps.executeQuery();
 		   if(row.next()){
-			   request.getSession().setAttribute("name", name);
+			   User user = new User();
+			   user.setName(name);
+			   user.setPassword(pass);
+			   request.getSession().setAttribute("user", user);
 			   String named = row.getString("name");
 			   System.out.println(named);
 			   request.setCharacterEncoding("utf-8");
