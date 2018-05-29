@@ -54,8 +54,11 @@ for(Goods good:list){
 <%=good.getname() %><p><div><%=good.getdescribe() %></div><p><p><div style="font-seze:10px;color:red;text-align:center;">¥<%=good.getprice() %></div>
 <p></p>
 <form action="BuyServlet" method="post" onsubmit="return check(this);">
+<input name="imgpath" type="hidden" value="<%=good.getimgpath() %>">
+<input name="price" type="hidden" value="<%=good.getprice() %>">
 <input name="num" type="text">台
 <input name="name" type="hidden" value="<%=good.getname()%>">
+<input name="id" type="hidden" value="<%=good.getId()%>">
 <button type="submit">购买</button>
 </form>
 </div>

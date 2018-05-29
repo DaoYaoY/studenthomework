@@ -14,12 +14,11 @@ public class Car {
 	}
 	
 	public void remove(String id) {
-		for(int i=0;i<list.size();i++) {
-			if(list.get(i).getId().equals(id)) {
-				list.remove(i);
-				break;
-			}
-		}
+		
+				this.list.remove(id);
+				
+	}
+		
 	}
   
-}
+

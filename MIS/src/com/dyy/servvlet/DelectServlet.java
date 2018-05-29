@@ -47,8 +47,9 @@ public class DelectServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		
 		if(user!=null) {
-			if(car!=null&&id!=null&&!"".equals(id)) {
+			if(car!=null&&id!=null) {
 				car.remove(id);
+				response.sendRedirect("ListServlet");
 			}else {
 				System.out .println("还没有购物车");
 			}

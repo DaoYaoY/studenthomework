@@ -5,6 +5,8 @@ public class CarItem {
 	private String id;
 	private String product;
 	private Integer num;
+	private String imgpath;
+	private int price;
 	public String getId() {
 		return id;
 	}
@@ -22,6 +24,18 @@ public class CarItem {
 	}
 	public void setNum(Integer num) {
 		this.num = num;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getImgpath() {
+		return imgpath;
+	}
+	public void setImgpath(String imgpath) {
+		this.imgpath = imgpath;
 	}
 
 	

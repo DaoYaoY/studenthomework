@@ -5,10 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+.bg{
+				height:100%;
+				width:100%;
+				text-align:center;
+				background-color:#66B3FF;
+				position:relative;
+			}
+.kk{
+                width:100px;
+                height:50px;
+                background-color:#66B3FF;
+}
+</style>
 </head>
 <body>
 <jsp:include page="head.jsp"></jsp:include>
-<div style="margin:30% 50%;text-align:center;width:200px;">
+<div class="bg" style="height:490px;" >
+<div style="margin:0px 35%;text-align:center;width:400px;">
 
 <%
 HttpSession sessiones =  request.getSession();
@@ -16,22 +31,33 @@ Car car = (Car) sessiones.getAttribute("car");
 User user = (User) session.getAttribute("user");
 
 %>
-<b><%=user.getName() %>的购物车</b>
-<table >
+<div style="text-align:center;height:100px;font-size:50px;color:red;"><%=user.getName() %>的购物车</b></div>
+<table style="border:solid 1px;">
 	<tr>
-	<td>商品名称</td>
-	<td>数量</td></tr>
+	<td class="kk">图商品片</td>
+	<td class="kk">商品名称</td>
+	<td class="kk">数量</td>
+	<td class="kk">单价</td>
+	<td class="kk">总价</td>
+	<td class="kk">删除</td>
+	</tr>
 <%
 if(car!=null){
 	for(CarItem carItem : car.list()){
 	%>	
 	<tr>
-	<td><%=carItem.getProduct() %></td><td><%=carItem.getNum() %></td>
+	<td class="kk"><img src="<%=carItem.getImgpath() %>" style="height:50px;width:50px;"></td>
+	<td class="kk"><%=carItem.getProduct() %></td><td class="kk"><%=carItem.getNum() %></td>
+	<td class="kk"><%=carItem.getPrice() %></td>
+	<td class="kk"><% int add = carItem.getPrice()*carItem.getNum(); %>
+	<%=add %></td>
+	<td class="kk" style="color:red;"><form><input name="id" type="hidden" value="<%=carItem.getId()%>"><button type="submit">删除</button></form></td>
 	</tr>
 	
 	
 <% 	}
 	}
-%></table></div>
+%></table>
+</div>
 </body>
 </html>

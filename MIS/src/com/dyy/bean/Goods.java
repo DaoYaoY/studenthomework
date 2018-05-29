@@ -10,9 +10,7 @@ public class Goods {
 	private String descrise;
 
 	public void setid(int id) {
-		// TODO 自动生成的方法存根
 		this.id = id;
-		
 	}
 	
 	public void setimgpath(String imgpath) {
@@ -51,7 +49,15 @@ public class Goods {
     }
     public String getdescribe() {
 		return descrise;
-    }	
+    }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}	
 	
 	
     

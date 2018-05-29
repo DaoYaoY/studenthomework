@@ -44,6 +44,9 @@ public class BuyServlet extends HttpServlet {
 		
 		String goodname = request.getParameter("name");
 		Integer num =Integer.parseInt(request.getParameter("num"));
+		String imgpath = request.getParameter("imgpath");
+		Integer price = Integer.parseInt(request.getParameter("price"));
+		String id = request.getParameter("id");
 		
 		
 		HttpSession session = request.getSession();
@@ -55,9 +58,11 @@ public class BuyServlet extends HttpServlet {
 		if(user!=null&&num!=null&&goodname!=null) {
 			CarItem carItem = new CarItem();
 			// UUID.randomUUID().toString()，一个随机且不重复的字符串，方便购物车项的查询
-			carItem.setId(UUID.randomUUID().toString());
+			carItem.setId(id);
 			carItem.setProduct(goodname);
 			carItem.setNum(num);
+			carItem.setImgpath(imgpath);
+			carItem.setPrice(price);
 			
 			if(car==null) {
 				car = new Car();
