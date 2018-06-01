@@ -17,7 +17,9 @@ function check(form){
 </script>
 </head>
 
-<body style="height:100%;width:100%;text-align:center;background-color:#66B3FF;position:relative;">
+<body style="height:100%;width:100%;text-align:center;position:relative;background-image:url(images/背景5.jpg);
+
+background-size:100% 1000px;">
 <div style="position:absolute;
                 text-align:center;
                 width:300px;
@@ -25,8 +27,11 @@ function check(form){
                 border-radius:10px;
                 border:solid rgb(100,100,100) 1px;
                 margin:150px 520px;
+               
+                filter:alpha(opacity:30);
+                opacity:0.7;
                 position:absolute;">
-  <p><p><p><p><p><p>   <form action="Register" method="post" id="form" onsubmit="return check(this);">
+            <br><br>   <form action="Register" method="post" id="form" onsubmit="return check(this);">
    
     <table align="center">
          <tr>
@@ -66,7 +71,7 @@ function check(form){
             <td>
                 <input type="submit" value="注册"/>
                 <input type="reset" value="重置"/>
-                <a href="login.jsp" target="_blank">登陆</a>
+                <a href="login.jsp" target="_blank">登录</a>
             </td>
         </tr>
     </table>

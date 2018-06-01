@@ -1,6 +1,9 @@
+
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import ="javax.servlet.http.Cookie" %>    
+<%@ page import ="javax.servlet.http.Cookie" 
+    import = "com.dyy.bean.*"
+%>    
     <% 
 String path=request.getContextPath();
 String basepath=request.getScheme()+"://"+request.getServerName()+":"+request.getServerName()+":"+request.getServerPort()+path+"/";%>
@@ -37,7 +40,7 @@ html,body{
 				height:100%;
 				width:100%;
 				text-align:center;
-				background-color:#66B3FF;
+				background-color:#FFE4B5;
 				position:relative;
 			}
 .login{
@@ -47,29 +50,41 @@ html,body{
                 border-radius:10px;
                 border:solid rgb(100,100,100) 1px;
                 margin:150px 520px;
+                filter:alpha(opacity:30);
+                opacity:0.7;
                 position:absolute;
                 
 }
 </style>
 <%
+    User user = new User(); 
+    user =(User) session.getAttribute("user");
 	Cookie [] cookies = request.getCookies();
-    String name = "";
-    String  pass = "";
-    if(cookies!=null)
+    if(cookies!=null&&cookies.length>0&&user!=null)
     {
-    	for(int i=0;i<cookies.length;i++)
+    	for(Cookie cookie : cookies)
     	{
-    		if(cookies[i].getName().equals("cookie"))
-    			response.sendRedirect("login_success.jsp");
+    		if("session".equals(cookie.getName())){
+    			session = (HttpSession) application.getAttribute(cookie.getValue());
+    		    //user =(User) session.getAttribute("user");
+    		    System.out.println(user);
+    			//session.setAttribute("user", user);
+    			
+    			response.sendRedirect("header.jsp");
+    			}
     	}
     }
 %>
-<body>
-<div class="bg">
+<body style="height:100%;width:100%;text-align:center;position:relative;background-image:url(images/背景5.jpg);
+
+background-size:100% 1000px;">
+<div class="bg" style="height:100%;width:100%;text-align:center;position:relative;background-image:url(images/背景5.jpg);
+
+background-size:100% 1000px;">
  <div class="login">
 <form action="Login" method="post" onsubmit="return check(this);">   
 <input type="hidden" name="methodNaem"value="1"/>
-<p>账号：<input type="text" name="name" id="name" style="margin-top:120px;"/></p>
+<p>账号：<input type="text" name="name" id="name" style="margin-top:120px;"/></p><br>
 <p>密码：<input type="password" name="password" id="password"/></p><br>
 <p><button type="submit" style="margin-right:20px;">登录</button><button type="reset" style="margin-right:20px;">重置</button>
 <a href="register.jsp" target="_blank">注册</a></p>

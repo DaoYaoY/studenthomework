@@ -13,9 +13,9 @@ public class Car {
 		this.list.add(carIterm);
 	}
 	
-	public void remove(String id) {
+	public void remove(CarItem carItem) {
 		
-				this.list.remove(id);
+				this.list.remove(carItem);
 				
 	}
 		

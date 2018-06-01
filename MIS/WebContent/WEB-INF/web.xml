@@ -40,5 +40,16 @@
     <servlet-name>FindPage</servlet-name>
     <url-pattern>/FindPage</url-pattern>
   </servlet-mapping>
+ <servlet>
+    <servlet-name>DelectServlet</servlet-name>
+    <servlet-class>com.dyy.servvlet.DelectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelectServlet</servlet-name>
+    <url-pattern>/DelectServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>header.jsp</welcome-file>
+</welcome-file-list>
   
 </web-app>

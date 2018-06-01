@@ -1,10 +1,14 @@
-<%@ page language="java" import="java.sql.*" contentType="text/html;charset=utf-8"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="com.dyy.conser.*" import="com.dyy.bean.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <% 
 String path = request.getContextPath(); 
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+%><%HttpSession sessiones = request.getSession();
+User user = (User)sessiones.getAttribute("user");
 %>
  
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+
 <html> 
  <head>
    <base href="<%=basePath%>"> 
@@ -20,7 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  </head>
  
  <body> 
-  欢迎您  ${name }     <a href="Outlogin">退出登录 </a>   
+
+  欢迎您  ${user.getName() }     <a href="Outlogin">退出登录 </a>   
   <% out.println("登录成功");%>   
   
   </body> 

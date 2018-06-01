@@ -12,11 +12,12 @@ import javax.servlet.http.HttpSession;
 
 import com.dyy.bean.*;
 import com.dyy.conser.Car;
+import com.dyy.conser.CarItem;
 
 /**
  * Servlet implementation class DelectServlet
  */
-@WebServlet(description = "删除购物车商品", urlPatterns = { "/DelectServlet" })
+//@WebServlet("/DelectServlet")
 public class DelectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -46,10 +47,21 @@ public class DelectServlet extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		
+				
 		if(user!=null) {
 			if(car!=null&&id!=null) {
-				car.remove(id);
-				response.sendRedirect("ListServlet");
+				for(CarItem carItem : car.list()) {
+				System.out.println(carItem.getId());	
+					if(carItem.getId().equals(id)) { 
+					   System.out.println(carItem.getId());
+				       car.remove(carItem);break; }
+				       
+					  
+					
+				//session.setAttribute("car", car);
+				//response.sendRedirect("ListServlet");
+					}session.setAttribute("car", car);
+				     response.sendRedirect("ListServlet");
 			}else {
 				System.out .println("还没有购物车");
 			}

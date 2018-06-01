@@ -77,26 +77,31 @@ public class Login extends HttpServlet {
 			   User user = new User();
 			   user.setName(name);
 			   user.setPassword(pass);
-			   request.getSession().setAttribute("user", user);
+			   HttpSession session = request.getSession();
+			   session.setAttribute("user", user);
 			   String named = row.getString("name");
-			   System.out.println(named);
-			   request.setCharacterEncoding("utf-8");
-			   Cookie cookie = new Cookie("cookie",name.trim());
-			   cookie.setMaxAge(10);
+			  
+			   Cookie cookie = new Cookie("session",session.getId());
+			   cookie.setMaxAge(60*5);
+			   session.setMaxInactiveInterval(10*60);
 			   response.addCookie(cookie);
+			   getServletContext().setAttribute(session.getId(), session);
+			   //此时需要在应用域中添加一个属性，用于储存用户的sessionid和对应的session关系  
+			   //以保证后面可以根据sessionid获取到session 
+			   String referer = request.getHeader("Referer");
 			   response.sendRedirect("header.jsp");
 			      
 		   }else {
-			   //System.out.println("������˻����󣡣�");
+			   //System.out.println("密码或账户错误！！");
 			   response.sendRedirect("login_fali.jsp");
 		   }
 		   dao.close(conn, ps, row);
 		  // response.sendRedirect("login_fali.jsp");
 		}catch (SQLException e) {
-				// TODO �Զ����ɵ� catch ��
+				// TODO 自动生成的 catch 块
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
-			// TODO �Զ����ɵ� catch ��
+			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
 	}

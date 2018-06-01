@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import = "com.dyy.bean.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,6 +29,7 @@
       height:400px;
       width:100%;
       border:none;
+      text-align:center;
       background-image:url();
       //margin:0px 0px;
 }
@@ -65,7 +66,7 @@
       background-color:Azure;
       text-align:center;
       text-size:5;
-      width:400px;
+      wid"WebContent/header.jsp"th:400px;
       height:400px;
       float:right;
       margin-right:30px;
@@ -89,7 +90,7 @@
       text-align:center;
       text-size:5;
       width:200px;
-      height:200px;
+      height:100px;
       float:left;
       margin-left:60px;
 }
@@ -115,9 +116,28 @@
       background-color:red;
 }
 </style>
+<script type="application/javascript">
+var imgs = new Array
+(
+	"images/手机会场.jpg",
+	"images/手机会场1.jpg",
+	"images/背景3.jpg")
+var nums = 0;
+setInterval("fort()",2500);
+function fort(){
+	iimg.src = imgs[nums];
+	nums++;
+	if(nums==3)nums=0;
+}
+</script>
 </head>
 <body>
- <div style="background-color:white;color:black">           <p class="view"><font size="2"><a href="login.jsp"style="text-decoration:none;">登录</a>   <a href="register.jsp"style="text-decoration:none;"> 注册</a></font> </p><hr/>
+ <div style="background-color:white;color:black">    <%User user = new User();user = (User)session.getAttribute("user");if(user==null){%>
+	 
+  <p class="view"><font size="2"><a href="login.jsp"style="text-decoration:none;">登录</a>   <a href="register.jsp"style="text-decoration:none;"> 注册</a></font> </p><hr/><%} %><%else{ %>
+  <p class="view"><font size="2"><%=user.getName() %><a href="Outlogin"style="text-decoration:none;">退出登录</a>  <a href="register.jsp"style="text-decoration:none;"> 注册</a></font> </p><hr/>
+  <%} %>
+  
 <div class="top2">
             <img src="images/淘宝.gif" width=80px height=50px style="vertical-align:bottom;" />
             <input style="vertical-align:right;border:1px solid ";"type="search"  value=""/><input type="button" value="搜索"/>
@@ -129,26 +149,24 @@
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"><a href="">化妆品</a>     </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>女装</a>   </div>    
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 家居 </a> </div>      
-<<<<<<< HEAD
+
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a> 美食</a>     </div>   
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a>个人中心</a></div>  
-=======
+            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     
+
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>美妆</a>     </div>   
-            <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     <div class="daohang" style="float:right;">   <a href="ListServlet">我的购物车</a></div>  
->>>>>>> b30a5cd9a4ccee1b38e9d12e0c37fc77637732c9
+            <div class="daohang" style="float:right;">   <a href="ListServlet">我的购物车</a></div>  
+
 </div></div>
 
 
 </div>
 
 
-<link rel="stylesheet"type="text/css"href="MyStyle.css">
-<script type="text/javascript">src="MoveEffect.js"</script>
-<div id="photo-list"><ul id="scroll">
-<li><a href="#"><img src="images/手机会场.jpg"width="400px"height="200px"alt=""/></a></li>
-<li><a href="#"><img src="images/手机会场1.jpg"width="400px"height="200px"alt=""/></a></li>
-</ul>
+
+<div class="righttop">
+<img id="iimg" src="images/手机会场1.jpg"alt="" style="width:100%;height:400px;" />
 </div>
+
 <div class="righttop">
     <img alt=""src="images/品牌街.jpg">
     <img alt="" src="images/苹果.jpg"style="width:200px;height:200px">

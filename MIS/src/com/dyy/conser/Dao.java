@@ -25,7 +25,7 @@ public class Dao {
         driver="com.mysql.jdbc.Driver";
         url="jdbc:mysql://localhost:3306/web?useUnicode=true&characterEncodeing=UTF-8";
         user="root";
-        password="";
+        password="111";
     }
    
     /***

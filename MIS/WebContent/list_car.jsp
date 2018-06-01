@@ -51,13 +51,16 @@ if(car!=null){
 	<td class="kk"><%=carItem.getPrice() %></td>
 	<td class="kk"><% int add = carItem.getPrice()*carItem.getNum(); %>
 	<%=add %></td>
-	<td class="kk" style="color:red;"><form><input name="id" type="hidden" value="<%=carItem.getId()%>"><button type="submit">删除</button></form></td>
+	<td class="kk" style="color:red;"><form action="DelectServlet"><input name="id" type="hidden" value="<%=carItem.getId()%>"><button type="submit">删 除</button></form></td>
 	</tr>
 	
 	
 <% 	}
 	}
-%></table>
+%>
+
+</table>
+<div></div>
 </div>
 </body>
 </html>
