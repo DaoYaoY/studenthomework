@@ -1,7 +1,7 @@
 package com.dyy.conser;
 
 import java.util.*;
-
+import com.dyy.conser.CarItem;;
 
 public class Car {
 	private List<CarItem> list = new ArrayList<CarItem>();
