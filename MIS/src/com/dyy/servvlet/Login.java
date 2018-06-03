@@ -73,13 +73,15 @@ public class Login extends HttpServlet {
 		   ps.setString(1, name);
 		   ps.setString(2, pass);
 		   ResultSet row=ps.executeQuery();
+		   
 		   if(row.next()){
 			   User user = new User();
 			   user.setName(name);
 			   user.setPassword(pass);
+			   user.setId(row.getInt("id"));
 			   HttpSession session = request.getSession();
 			   session.setAttribute("user", user);
-			   String named = row.getString("name");
+			  // String named = row.getString("name");
 			  
 			   Cookie cookie = new Cookie("session",session.getId());
 			   cookie.setMaxAge(60*5);
@@ -88,7 +90,7 @@ public class Login extends HttpServlet {
 			   getServletContext().setAttribute(session.getId(), session);
 			   //此时需要在应用域中添加一个属性，用于储存用户的sessionid和对应的session关系  
 			   //以保证后面可以根据sessionid获取到session 
-			   String referer = request.getHeader("Referer");
+			  // String referer = request.getHeader("Referer");
 			   response.sendRedirect("header.jsp");
 			      
 		   }else {

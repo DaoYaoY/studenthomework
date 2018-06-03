@@ -59,7 +59,8 @@ for(Goods good:list){
 <input name="num" type="text">台
 <input name="name" type="hidden" value="<%=good.getname()%>">
 <input name="id" type="hidden" value="<%=good.getId()%>">
-<button type="submit">购买</button>
+<input name="des" type="hidden" value="<%=good.getdescribe() %>">
+<button type="submit">加入购物车</button>
 </form>
 </div>
 </div>

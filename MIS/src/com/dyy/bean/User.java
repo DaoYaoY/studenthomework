@@ -6,6 +6,7 @@ public class User {
 	    private String name="";
 	    private String email;
 	    private String phone;
+	    private Integer id;
 	   
 	    public String getName() {
 	        return name;
@@ -38,6 +39,12 @@ public class User {
 	        return "User [name=" + name + ", password=" + password + ", email=" + email + ", phone=" + phone
 	                + "]";
 	    }
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
 		
 	    
 	    

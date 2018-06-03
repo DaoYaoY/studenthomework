@@ -6,6 +6,9 @@ public class CarItem {
 	private Integer num;
 	private String imgpath;
 	private int price;
+	private String des;
+	
+	
 	public String getProduct() {
 		return product;
 	}
@@ -35,6 +38,12 @@ public class CarItem {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public String getdes() {
+		return des;
+	}
+	public void setdes(String des) {
+		this.des = des;
 	}
 	
 

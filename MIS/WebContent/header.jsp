@@ -154,7 +154,7 @@ function fort(){
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a href="FindPage">手机</a>      </div>                                     
 
             <div class="daohang" onmouseover="this.className='daohang2'" onmouseout="this.classNamw='daohang'"> <a>美妆</a>     </div>   
-            <div class="daohang" style="float:right;">   <a href="ListServlet">我的购物车</a></div>  
+            <div class="daohang" style="float:right;">   <a href="user.jsp">个人中心</a></div> <div class="daohang" style="float:right;">   <a href="ListServlet">我的购物车</a></div>  
 
 </div></div>
 

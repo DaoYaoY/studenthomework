@@ -47,6 +47,7 @@ public class BuyServlet extends HttpServlet {
 		String imgpath = request.getParameter("imgpath");
 		Integer price = Integer.parseInt(request.getParameter("price"));
 		String id = request.getParameter("id");
+		String des = request.getParameter("des");
 		
 		
 		HttpSession session = request.getSession();
@@ -63,6 +64,7 @@ public class BuyServlet extends HttpServlet {
 			carItem.setNum(num);
 			carItem.setImgpath(imgpath);
 			carItem.setPrice(price);
+			carItem.setdes(des);
 			
 			if(car==null) {
 				car = new Car();
@@ -71,7 +73,7 @@ public class BuyServlet extends HttpServlet {
 			
 			car.add(carItem);
 			//out.println("<script language='javascript'>alert('购买成功！');window.location.href='response.sendRedirect(request.getHeader('Referer'))';</script>");
-			JOptionPane.showMessageDialog(null, "购买成功");
+			JOptionPane.showMessageDialog(null, "添加成功");
 			response.sendRedirect(request.getHeader("Referer"));
 			
 			

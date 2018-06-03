@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <servlet>
     <servlet-name>AllServlet</servlet-name>
     <servlet-class>com.dyy.servvlet.AllServlet</servlet-class>
@@ -32,7 +32,7 @@
     <servlet-name>Outlogin</servlet-name>
     <url-pattern>/Outlogin</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>FindPage</servlet-name>
     <servlet-class>com.dyy.servvlet.FindPage</servlet-class>
   </servlet>
@@ -40,7 +40,7 @@
     <servlet-name>FindPage</servlet-name>
     <url-pattern>/FindPage</url-pattern>
   </servlet-mapping>
- <servlet>
+  <servlet>
     <servlet-name>DelectServlet</servlet-name>
     <servlet-class>com.dyy.servvlet.DelectServlet</servlet-class>
   </servlet>
@@ -50,6 +50,35 @@
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>header.jsp</welcome-file>
-</welcome-file-list>
-  
+  </welcome-file-list>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+      <taglib-location>/WEB-INF/fmt.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+      <taglib-location>/WEB-INF/c.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/fn</taglib-uri>
+      <taglib-location>/WEB-INF/fn.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/perTag</taglib-uri>
+      <taglib-location>/WEB-INF/permittedTaglibs.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+      <taglib-location>/WEB-INF/sql.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/script</taglib-uri>
+      <taglib-location>/WEB-INF/scriptfree.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+      <taglib-location>/WEB-INF/x.tld</taglib-location>
+    </taglib>
+  </jsp-config>
 </web-app>
